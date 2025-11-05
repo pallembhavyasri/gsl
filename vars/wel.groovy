@@ -1,15 +1,6 @@
-def call(String projectName) {
-    script {
-        echo "welcome to: ${projectName.toUpperCase()}"
+ import com.example.MyClass // Import the class from src
+
+    def call() {
+        def obj = new MyClass() // Instantiate the class
+        echo obj.sayHello()     // Call a method from the class
     }
-}
-
-
-def call(Map stageParams) {
-
-    checkout([
-        $class: 'GitSCM',
-        branches: [[name:  stageParams.branch ]],
-        userRemoteConfigs: [[ url: stageParams.url ]]
-    ])
-  }
