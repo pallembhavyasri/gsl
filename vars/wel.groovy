@@ -1,6 +1,6 @@
- import com.example.MyClass // Import the class from src
+ import com.example.samp //import from src
 
     def call() {
-        def obj = new MyClass() // Instantiate the class
-        echo obj.sayHello()     // Call a method from the class
+        def obj = new samp() // Instantiate the class
+        echo obj.hiii()     // Call a method from the class
     }
